@@ -23,8 +23,8 @@ show_drafts: true
 
 permalink: /blog/:year/:month/:day/:title/
 
-paginate: 5
-paginate_path: 'page:num'
+# paginate: 5
+# paginate_path: 'page:num'
 
 # Markdown library
 markdown: redcarpet
