@@ -1,0 +1,16 @@
+---
+layout: default
+title: CainCode Blog
+---
+
+<div class="posts">
+    <h1>Blog Posts</h1>
+    {% for post in site.posts %}
+        <article>
+            <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <time datetime="{{ post.date }}">Posted {{ post.date | date_to_string }}</time>
+            <p>{{ post.excerpt }}</p>
+            <a href="{{ post.url }}">Read More</a>
+        </article>
+    {% endfor %}
+</div>

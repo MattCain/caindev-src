@@ -1,0 +1,36 @@
+# Jekyll configuration precedence:
+# 1. Gruntfile task
+# 2. config.build.yml
+# 3. config.yml
+
+name: caincode
+description: 
+author:
+  name: Matt Cain
+  email: matt@cainmedia.com
+
+url: https://mattcain.github.io
+
+# Grunt handles images and assets.
+exclude: ['img', 'css', 'js', 'fonts',
+          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+
+include: ['.htaccess']
+
+# _config.build.yml sets future and show_drafts to false on `grunt build`
+future: true
+show_drafts: true
+
+permalink: /blog/:year/:month/:day/:title/
+
+paginate: 5
+paginate_path: 'page:num'
+
+# Markdown library
+markdown: redcarpet
+#   extensions: ['fenced_code_blocks', 'smart']
+
+pygments: true
+
+# change this to available to show the hire me paragraph/link on the home page
+hiringStatus: available
