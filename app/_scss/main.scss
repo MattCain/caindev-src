@@ -334,6 +334,26 @@ main {
                 color: #999;
                 font-size: 13px;
             }
+
+            .highlight {
+                background-color: #f1f1f1;
+                padding: 10px;
+
+                pre {
+                    margin: 0px;
+                    
+                    .lineno {
+                        color: #aaa;
+                        padding-right: 10px;
+                        -webkit-touch-callout: none;
+                        -webkit-user-select: none;
+                        -khtml-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                    }
+                }
+            }
         }
     }
 }
