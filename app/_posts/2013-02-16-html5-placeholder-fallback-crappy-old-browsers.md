@@ -110,7 +110,7 @@ I hope this helps you out.
     }
     var timer = function() {
         if (window.jQuery) {
-            placeholderCallback(window.jQuery);
+            placeholderFallback(window.jQuery);
         } else {
             window.setTimeout(timer, 100);
         }
