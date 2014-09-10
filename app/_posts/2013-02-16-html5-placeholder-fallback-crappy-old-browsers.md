@@ -72,41 +72,53 @@ Then all you have to do is add the following rule to your css to make your fake 
 I hope this helps you out.
 
 <script>
-(function($) {
-    if (!Modernizr.input.placeholder) {
-        // For every element that has a placeholder attribute
-        $('[placeholder]').each(function() {
-            var $this = $(this),
-                placeholderValue = $this.attr('placeholder'); // Save the value of the placeholder for later
+(function() {
+    var placeholderFallback = function($) {
+        if (!Modernizr.input.placeholder) {
+            // For every element that has a placeholder attribute
+            $('[placeholder]').each(function() {
+                var $this = $(this),
+                    placeholderValue = $this.attr('placeholder'); // Save the value of the placeholder for later
 
-            if ($this.val() == '') { // if field is empty, put the placeholder in it
-                $this.val( placeholderValue );
-                $this.addClass('hasPlaceholderText');
-            }
-            // Add/remove placeholder on focus/blur
-            $this.focus(function() {
-                // Hide the placeholder so the user can enter their own text
-                if ($this.val() == placeholderValue) {
-                    $this.val('');
-                    $this.removeClass('hasPlaceholderText');
-                }
-            }).blur(function() {
-            // If the user didn't enter any text, show the placeholder text again.
-                if ($this.val() == '' || $this.val() == placeholderValue) {
-                    $this.val(placeholderValue);
+                if ($this.val() == '') { // if field is empty, put the placeholder in it
+                    $this.val( placeholderValue );
                     $this.addClass('hasPlaceholderText');
                 }
-            });
+                // Add/remove placeholder on focus/blur
+                $this.focus(function() {
+                    // Hide the placeholder so the user can enter their own text
+                    if ($this.val() == placeholderValue) {
+                        $this.val('');
+                        $this.removeClass('hasPlaceholderText');
+                    }
+                }).blur(function() {
+                // If the user didn't enter any text, show the placeholder text again.
+                    if ($this.val() == '' || $this.val() == placeholderValue) {
+                        $this.val(placeholderValue);
+                        $this.addClass('hasPlaceholderText');
+                    }
+                });
 
-            // If the user submits the form, remove the placeholder if it is still there.
-            $this.closest('form').submit(function() {
-                if ($this.val() == $this.attr('placeholder')) {
-                    $this.val('');
-                }
+                // If the user submits the form, remove the placeholder if it is still there.
+                $this.closest('form').submit(function() {
+                    if ($this.val() == $this.attr('placeholder')) {
+                        $this.val('');
+                    }
+                });
             });
-        });
+        }
     }
-})(jQuery);
+    var timer = function() {
+        if (window.jQuery) {
+            placeholderCallback(window.jQuery);
+        } else {
+            window.setTimeout(timer, 100);
+        }
+    };
+    timer();
+})();
+
+
 </script>
 <style>
 .hasPlaceholderText {
