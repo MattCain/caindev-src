@@ -6,7 +6,7 @@ date:   2014-03-12 16:31:55
 
 I finally got around to making a new personal site (the one you're on now!) and decided to move from Wordpress to [Jekyll](http://jekyllrb.com), as I felt like trying something new and Jekyll has had a good bit of buzz around it since it launched.
 
-I elected to use the [yeoman](http://yoeman.io) generator [generator-jekyllrb](https://github.com/robwierzbowski/generator-jekyllrb) to scaffold out my new Jekyll install as it came with loads of familiar tools built like grunt and all my favourite grunt modules like Sass, rev, autoprefixer, usemin, imagemin, uglify and more.
+I elected to use the [yeoman](http://yoeman.io) generator [generator-jekyllrb](https://github.com/robwierzbowski/generator-jekyllrb) to scaffold out my new Jekyll install as it came with loads of familiar tools, like grunt and all my favourite grunt modules (Sass, rev, autoprefixer, usemin, imagemin, uglify, etc.)
 
 I had kind of expected things to be a bit more complicated than they actually were, so it was nice to take a look around in the source files of the new project and see that everything was pretty straight forward. It's all just HTML with some Liquid templating thrown in to take care of the dynamic stuff, like includes and looping through post data. As I'm already familiar with Handlebars templates, Liquid wasn't much of a jump.
 
