@@ -3,13 +3,13 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Matt Cain -- Web Developer -- @caindev
 
 # THANKS
 
-    <name>
+    Jekyll Team
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
+    HTML5, CSS3, Jekyll
     Normalize.css, jQuery, Modernizr
