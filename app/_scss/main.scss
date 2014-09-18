@@ -395,7 +395,7 @@ main {
         }
 
         #webdev {
-            margin: -15px 0 0 85px;
+            margin: -20px 0 0 85px;
         }
 
         #mobile-nav-trigger {
@@ -424,12 +424,14 @@ main {
                     a {
                         border: none;
                         background-color: rgba(255, 255, 255, 0.1);
+                        padding-left: 0px;
                     }
                 }
             }
 
             #social {
                 text-align: center;
+                margin-left: 0px;
             }
         }
     }
