@@ -363,11 +363,21 @@ main {
 @media (max-width: 992px) {
     main #content .home #skills .skill-list {
         &#front-end, &#sysadmin {
-            margin-right: 10px;
+            margin-right: 20px;
         }
     }
 }
 
+
+// At 835px there is no longer room for side by side skill lists.
+@media (min-width: 768px) and  (max-width: 835px) {
+    main #content .home #skills .skill-list {
+        clear: left;
+        margin-right: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+}
 
 @media (max-width: 767px) {
     #header {
@@ -444,14 +454,17 @@ main {
             padding: 25px;
             border-radius: none;
             border: none;
-
-            .home #skills .skill-list {
-                clear: left;
-                margin-right: 0px;
-                padding: 0px;
-                width: 100%;
-            }
         }
+    }
+}
+
+// At 635px there is no longer room for side by side skill lists on tablet
+@media (max-width: 635px) {
+    main #content .home #skills .skill-list {
+        clear: left;
+        margin-right: 0px;
+        padding: 0px;
+        width: 100%;
     }
 }
 
