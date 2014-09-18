@@ -257,7 +257,6 @@ main {
                     padding: 5px;
                     float: left;
                     width: 45%;
-                    max-width: 350px;
 
                     &#front-end, &#sysadmin {
                         margin-right: 40px;
@@ -297,7 +296,8 @@ main {
                     }
                     .where-when {
                         float: right;
-                        min-width: 155px;
+                        min-width: 150px;
+                        margin: 0 0 10px 10px;
 
                         a {
                             font-size: 13px;
@@ -360,6 +360,14 @@ main {
 }
 
 
+@media (max-width: 992px) {
+    main #content .home #skills .skill-list {
+        &#front-end, &#sysadmin {
+            margin-right: 10px;
+        }
+    }
+}
+
 
 @media (max-width: 767px) {
     #header {
@@ -372,7 +380,7 @@ main {
         }
 
         #me {
-            margin-top: 10px;
+            margin: 10px 0;
         }
 
         #avatar {
@@ -383,11 +391,11 @@ main {
 
         #name {
             display: block;
-            margin: -65px 0 0 83px;
+            margin: -70px 0 0 83px;
         }
 
         #webdev {
-            margin: -20px 0 0 85px;
+            margin: -15px 0 0 85px;
         }
 
         #mobile-nav-trigger {
@@ -407,8 +415,23 @@ main {
             &.closed {
                 display: none;
             }
-        }
 
+            ul {
+                text-align: center;
+
+                li {
+                    margin-bottom: 5px;
+                    a {
+                        border: none;
+                        background-color: rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+
+            #social {
+                text-align: center;
+            }
+        }
     }
     main {
         left: 0px;
@@ -419,17 +442,28 @@ main {
             padding: 25px;
             border-radius: none;
             border: none;
+
+            .home #skills .skill-list {
+                clear: left;
+                margin-right: 0px;
+                padding: 0px;
+                width: 100%;
+            }
         }
     }
 }
 
 
-
-
-
-
-
-
+@media (max-width : 480px) {
+    main #content .home {
+        #experience .exp {
+            .where-when {
+                min-width: initial;
+                width: 120px;
+            }
+        }
+    }
+}
 
 
 /* ==========================================================================
