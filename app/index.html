@@ -13,6 +13,11 @@ title: "Matt Cain - Freelance Web Developer London - Milton Keynes"
             <p>I'm currently available for hire, <a href="#" class="hiringEmail">send me an email</a> if I can help you out!</p>
         </section>
     {% endif %}
+    {% if site.hiringStatus == "unavailable" %}
+        <section id="hire">
+            <p>I'm not currently available for hire as I'm working a contract until February 2015, but feel free to <a href="#" class="hiringEmail">send me an email</a> if you'd like to talk about hiring me after that!</p>
+        </section>
+    {% endif %}
 
     <section id="skills">
         <h2><i class="fa fa-certificate"></i> My Skills</h2>
