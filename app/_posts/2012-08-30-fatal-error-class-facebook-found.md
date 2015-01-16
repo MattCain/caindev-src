@@ -8,6 +8,6 @@ After setting up a new development environment and trying to get a PHP project u
 
 `Fatal error: Class 'Facebook' not found in [File path]`
 
-I was absolutely sure that when I included the Facebook PHP-sdk that I was getting the path to the facebook.php file right. After googling high and low, I eventually found out that the cause of the error was that *I was missing the php5-curl module*. I installed the module, restarted apache and the error disappeared.
+I was absolutely sure that when I included the Facebook PHP-sdk that I was getting the path to the facebook.php file right. After googling high and low, I eventually found out that the cause of the error was that _I was missing the php5-curl module_. I installed the module, restarted apache and the error disappeared.
 
 It took me forever to find that out so hopefully I’ve saved you some time if you are getting this error!
