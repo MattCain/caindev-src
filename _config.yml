@@ -31,6 +31,3 @@ markdown: redcarpet
 #   extensions: ['fenced_code_blocks', 'smart']
 
 pygments: true
-
-# change this to available to show the hire me paragraph/link on the home page
-hiringStatus: unavailable
