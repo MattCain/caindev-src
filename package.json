@@ -1,8 +1,8 @@
 {
-  "name": "caincode",
+  "name": "caindev",
   "private": true,
   "version": "0.0.0",
-  "description": "Yeoman workflow for caincode",
+  "description": "Yeoman workflow for caindev",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
