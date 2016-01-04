@@ -34,10 +34,6 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/_coffee/**/*.coffee'],
         tasks: ['coffee:dist']
       },
-      coffeeTest: {
-        files: ['test/spec/**/*.coffee'],
-        tasks: ['coffee:test']
-      },
       jekyll: {
         files: [
           '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
