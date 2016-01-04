@@ -75,27 +75,6 @@ module.exports = function (grunt) {
           }
         }
       },
-      test: {
-        bsFiles: {
-          src: [
-            '.jekyll/**/*.html',
-            '.tmp/css/**/*.css',
-            '{.tmp,<%= yeoman.app %>}/js/**/*.js',
-            '{<%= yeoman.app %>}/_bower_components/**/*.js',
-            '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
-          ]
-        },
-        options: {
-          server: {
-            baseDir: [
-              '.jekyll',
-              '.tmp',
-              '<%= yeoman.app %>'
-            ]
-          },
-          watchTask: true
-        }
-      }
     },
     clean: {
       dist: {
@@ -165,15 +144,6 @@ module.exports = function (grunt) {
           ext: '.js'
         }]
       },
-      test: {
-        files: [{
-          expand: true,
-          cwd: 'test/spec',
-          src: '**/*.coffee',
-          dest: '.tmp/spec',
-          ext: '.js'
-        }]
-      }
     },
     jekyll: {
       options: {
@@ -420,7 +390,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('deploy', [
     'check',
-    'test',
     'build',
     'buildcontrol'
   ]);
