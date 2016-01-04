@@ -312,8 +312,8 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: '../',
-          branch: 'gh-pages',
+          remote: 'https://github.com/MattCain/mattcain.github.io.git',
+          branch: 'master',
           commit: true,
           push: true
         }
@@ -390,13 +390,6 @@ module.exports = function (grunt) {
     grunt.task.run(['serve']);
   });
 
-  // No real tests yet. Add your own.
-  grunt.registerTask('test', [
-  //   'clean:server',
-  //   'concurrent:test',
-  //   'browserSync:test'
-  ]);
-
   grunt.registerTask('check', [
     'clean:server',
     'jekyll:check',
@@ -423,14 +416,14 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
-    ]);
+  ]);
 
   grunt.registerTask('deploy', [
     'check',
     'test',
     'build',
     'buildcontrol'
-    ]);
+  ]);
 
   grunt.registerTask('default', [
     'check',
