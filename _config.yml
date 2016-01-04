@@ -21,13 +21,8 @@ include: ['.htaccess']
 future: true
 show_drafts: true
 
-permalink: /blog/:year/:month/:day/:title/
-
-# paginate: 5
-# paginate_path: 'page:num'
-
 # Markdown library
-markdown: redcarpet
+markdown: kramdown
 #   extensions: ['fenced_code_blocks', 'smart']
 
-pygments: true
+highlighter: true

@@ -11,5 +11,5 @@
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3, Jekyll
-    Normalize.css, jQuery, Modernizr
+    HTML5, CSS3 (SCSS), Jekyll
+    Normalize.css, Coffeescript, jQuery, Modernizr
